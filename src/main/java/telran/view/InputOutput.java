@@ -58,7 +58,7 @@ public interface InputOutput {
 	default String readStringPredicate(String prompt, String errorPrompt,
 			Predicate<String> predicate) {
 		return readObject(prompt, errorPrompt, i -> {
-			if (predicate.negate().test(i)) {
+			if (!predicate.test(i)) {
 				throw new IllegalArgumentException("Invalid format");
 			}
 
