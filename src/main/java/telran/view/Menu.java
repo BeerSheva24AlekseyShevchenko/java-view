@@ -46,7 +46,7 @@ public class Menu implements Item {
 
     private void displayItems(InputOutput io) {
         IntStream.range(0, items.length).forEach(
-            i -> io.writeLine(String.format("%d. %s", i, items[i].displayName()))
+            i -> io.writeLine(String.format("%d. %s", i + 1, items[i].displayName()))
         );
     }
 
