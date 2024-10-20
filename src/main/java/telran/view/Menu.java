@@ -9,7 +9,8 @@ public class Menu implements Item {
     private String symbol = "_";
     private int nSymbols = 15;
 
-    public Menu(Item... items) {
+    public Menu(String name, Item... items) {
+        this.name = name;
         this.items = Arrays.copyOf(items, items.length);
     }
 
@@ -60,5 +61,4 @@ public class Menu implements Item {
     public boolean isExit() {
         return false;
     }
-
 }
